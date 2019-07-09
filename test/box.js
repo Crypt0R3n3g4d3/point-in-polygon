@@ -24,7 +24,11 @@ test('box', function (t) {
  */
 test('flag', function (t) {
     var polygon = [ [ 1, 1 ], [ 10, 1 ], [ 5, 5 ], [ 10, 10 ], [ 1, 10 ] ];
+    t.ok(inside([ 2, 5 ], polygon));
     t.ok(inside([ 3, 5 ], polygon));
+    t.ok(inside([ 4, 5 ], polygon));
     t.ok(!inside([ 10, 5 ], polygon));
+    t.ok(!inside([ 11, 5 ], polygon));
+    t.ok(!inside([ 9, 5 ], polygon));
     t.end();
 });
