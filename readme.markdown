@@ -2,9 +2,9 @@
 
 Determine if a point is inside of a polygon.
 
-This module casts a ray from the inquiry point and counts intersections,
+This module casts a semi-infinite ray from the inquiry point and counts intersections,
 based on
-[this algorithm](http://www.ecse.rpi.edu/Homepages/wrf/Research/Short_Notes/pnpoly.html).
+[this algorithm](https://wrf.ecse.rpi.edu/Research/Short_Notes/pnpoly.html).
 
 # example
 
