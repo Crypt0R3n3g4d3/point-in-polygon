@@ -6,6 +6,9 @@ This module casts a semi-infinite ray from the inquiry point and counts intersec
 based on
 [this algorithm](https://wrf.ecse.rpi.edu/Research/Short_Notes/pnpoly.html).
 
+If you need a numerically robust solution and are willing to trade some performance for it,
+use [robust-point-in-polygon](https://github.com/mikolalysenko/robust-point-in-polygon).
+
 # example
 
 ``` js
