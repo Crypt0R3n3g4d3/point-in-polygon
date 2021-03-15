@@ -12,35 +12,31 @@ use [robust-point-in-polygon](https://github.com/mikolalysenko/robust-point-in-p
 # example
 
 ``` js
-var inside = require('point-in-polygon');
+var pointInPolygon = require('point-in-polygon');
 var polygon = [ [ 1, 1 ], [ 1, 2 ], [ 2, 2 ], [ 2, 1 ] ];
 
-console.dir([
-    inside([ 1.5, 1.5 ], polygon),
-    inside([ 4.9, 1.2 ], polygon),
-    inside([ 1.8, 1.1 ], polygon)
-]);
-```
-
-output:
-
-```
-[ true, false, true ]
+console.log(pointInPolygon([ 1.5, 1.5 ], polygon)); // true
+console.log(pointInPolygon([ 4.9, 1.2 ], polygon)); // false
+console.log(pointInPolygon([ 1.8, 1.1 ], polygon)); // true
 ```
 
 # methods
 
 ``` js
-var inside = require('point-in-polygon')
+var pointInPolygon = require('point-in-polygon')
+var pointInPolygonFlat = require('point-in-polygon/flat')
+var pointInPolygonNested = require('point-in-polygon/nested')
 ```
 
-## inside(point, polygon)
+## pointInPolygon(point, polygon)
 
 Return whether `point` is contained in `polygon`.
 
-`point` should be a 2-item array of coordinates.
+* `point` should be a 2-item array of coordinates.
+* `polygon` should be an array of 2-item arrays of coordinates or a flat array of coordinates
 
-`polygon` should be an array of 2-item arrays of coordinates.
+The flat or nested is detected automatically. Or you can use the specific methods if you want to
+skip the check.
 
 # install
 
