@@ -28,12 +28,14 @@ var pointInPolygonFlat = require('point-in-polygon/flat')
 var pointInPolygonNested = require('point-in-polygon/nested')
 ```
 
-## pointInPolygon(point, polygon)
+## pointInPolygon(point, polygon, start=0, end=polygon.length)
 
 Return whether `point` is contained in `polygon`.
 
-* `point` should be a 2-item array of coordinates.
+* `point` should be a 2-item array of coordinates
 * `polygon` should be an array of 2-item arrays of coordinates or a flat array of coordinates
+* `start` is an offset into `polygon`. default `0`
+* `end` is an offset into `polygon`. default `polygon.length`
 
 The flat or nested is detected automatically. Or you can use the specific methods if you want to
 skip the check.
